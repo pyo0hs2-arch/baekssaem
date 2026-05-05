@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>과학은 백쌤 | 약대 출신 과학 전문 과외</title>
+<meta name="description" content="경북대 약학과 출신 백승훈 선생님의 1:1 과학 과외. 중등과학부터 고3 수능까지 책임지는 맞춤 수업." />
+<meta property="og:title" content="과학은 백쌤 | 약대 출신 과학 전문 과외" />
+<meta property="og:description" content="경북대 약학과 출신 백승훈 선생님의 1:1 과학 과외." />
+<meta property="og:image" content="images/profile.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #ffffff;
+  --bg-soft: #fafafa;
+  --bg-mute: #f4f4f5;
+  --line: #e5e5e5;
+  --line-soft: #efefef;
+  --text: #0a0a0a;
+  --text-2: #404040;
+  --text-3: #737373;
+  --text-4: #a3a3a3;
+  --accent: #16a34a;
+  --accent-2: #2563eb;
+  --grad: linear-gradient(135deg, #16a34a 0%, #2563eb 100%);
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow: 0 4px 20px rgba(0,0,0,0.06);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.08);
+  --radius: 14px;
+  --radius-lg: 22px;
+  --max: 1140px;
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+  overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+.container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+/* ===== Header ===== */
+header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: box-shadow .3s ease, border-color .3s ease, background .3s ease;
+}
+header.scrolled {
+  background: rgba(255,255,255,0.95);
+  border-bottom-color: var(--line-soft);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 17px; }
+.brand-mark {
+  width: 26px; height: 26px;
+  background: var(--grad);
+  border-radius: 6px;
+  position: relative;
+}
+.brand-mark::after {
+  content: ''; position: absolute; inset: 6px;
+  background: #fff; border-radius: 3px;
+}
+.nav-links { display: flex; gap: 28px; font-size: 14.5px; color: var(--text-2); list-style: none; }
+.nav-links a:hover { color: var(--text); }
+.live-status {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; color: var(--text-2);
+}
+.live-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 0 rgba(22,163,74,0.5);
+  animation: pulse 2s infinite;
+}
+.nav-cta {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 16px;
+  background: var(--text);
+  color: #fff;
+  border-radius: 999px;
+  font-size: 13.5px; font-weight: 600;
+  transition: transform .15s ease;
+}
+.nav-cta:hover { transform: translateY(-1px); }
+@media (max-width: 880px) {
+  .nav-links, .live-status { display: none; }
+}
+@keyframes pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(22,163,74,0.5); }
+  50%     { box-shadow: 0 0 0 6px rgba(22,163,74,0); }
+}
+
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  padding: 160px 0 110px;
+  overflow: hidden;
+  background: #ffffff;
+  background-image:
+    /* hex grid (molecular structure paper feel) */
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='96' viewBox='0 0 56 96'><g fill='none' stroke='%230a0a0a' stroke-opacity='0.045' stroke-width='1'><polygon points='28,2 54,16 54,46 28,60 2,46 2,16'/><polygon points='28,50 54,64 54,94 28,108 2,94 2,64'/></g></svg>");
+  background-size: 56px 96px;
+}
+#hero-particles {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  z-index: 2;
+}
+.hero-gradient-overlay {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(900px 500px at 80% 0%, rgba(37,99,235,0.07), transparent 60%),
+    radial-gradient(900px 500px at 0% 100%, rgba(22,163,74,0.07), transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Floating science decorations */
+.science-deco {
+  position: absolute; inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+.science-deco svg, .science-deco .formula {
+  position: absolute;
+  opacity: 0.18;
+  color: #0a0a0a;
+}
+.science-deco .formula {
+  font-family: 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 500;
+  white-space: nowrap;
+  user-select: none;
+}
+.science-deco .accent-g { color: var(--accent); opacity: 0.22; }
+.science-deco .accent-b { color: var(--accent-2); opacity: 0.22; }
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50%     { transform: translateY(-18px) rotate(2deg); }
+}
+@keyframes float-y2 {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50%     { transform: translateY(14px) rotate(-3deg); }
+}
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+.float-1 { animation: float-y 9s ease-in-out infinite; }
+.float-2 { animation: float-y2 11s ease-in-out infinite; }
+.float-3 { animation: float-y 13s ease-in-out infinite; }
+.spin-slow { animation: spin-slow 30s linear infinite; transform-origin: center; }
+
+/* Positions */
+.deco-benzene-1 { top: 14%; left: 6%; width: 90px; height: 90px; }
+.deco-benzene-2 { bottom: 12%; right: 8%; width: 70px; height: 70px; }
+.deco-atom-1   { top: 22%; right: 10%; width: 110px; height: 110px; }
+.deco-atom-2   { bottom: 18%; left: 9%; width: 90px; height: 90px; }
+.deco-dna      { top: 50%; right: 4%; width: 60px; height: 160px; transform: translateY(-50%); }
+.deco-flask    { top: 12%; right: 28%; width: 60px; height: 80px; }
+.deco-formula-1 { top: 18%; left: 22%; font-size: 22px; }
+.deco-formula-2 { bottom: 22%; left: 30%; font-size: 18px; }
+.deco-formula-3 { top: 40%; left: 4%; font-size: 20px; }
+.deco-formula-4 { bottom: 35%; right: 22%; font-size: 19px; }
+
+@media (max-width: 880px) {
+  .deco-benzene-1, .deco-atom-1, .deco-flask, .deco-formula-1, .deco-formula-4 { display: none; }
+  .deco-atom-2 { width: 70px; height: 70px; }
+  .deco-dna { width: 44px; height: 110px; }
+  .deco-formula-2, .deco-formula-3 { font-size: 16px; opacity: 0.12; }
+}
+.hero-inner {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 12px;
+  background: var(--bg-mute);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--text-2);
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.hero-eyebrow .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(22,163,74,0.15);
+  animation: pulse 2s infinite;
+}
+.hero h1 {
+  font-size: clamp(34px, 5vw, 60px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+  min-height: 2.3em;
+}
+.typing-text {
+  display: inline;
+}
+.typing-cursor {
+  display: inline-block;
+  font-weight: 300;
+  color: var(--accent);
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+}
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.hero h1 .highlight {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  position: relative;
+}
+.hero p.lead {
+  font-size: 18px;
+  color: var(--text-2);
+  margin-bottom: 36px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-cta { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-size: 15px; font-weight: 600;
+  transition: transform .15s ease, box-shadow .25s ease;
+}
+.btn-primary {
+  background: var(--text); color: #fff;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.btn-ghost {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+.btn-ghost:hover { background: var(--bg-mute); }
+
+@media (max-width: 880px) {
+  .hero { padding: 120px 0 60px; }
+}
+
+/* ===== Trust Bar (slide-in stats) ===== */
+.trust-bar {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-soft);
+  padding: 24px 0;
+  overflow: hidden;
+}
+.trust-bar-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.trust-item {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; color: var(--text-2);
+  white-space: nowrap;
+}
+.trust-icon { font-size: 18px; }
+.trust-item strong { color: var(--text); font-weight: 700; }
+@media (max-width: 720px) {
+  .trust-bar-inner { justify-content: center; }
+}
+
+/* ===== Section common ===== */
+section { padding: 100px 0; }
+@media (max-width: 720px) { section { padding: 70px 0; } }
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.section-title {
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.section-desc {
+  font-size: 17px;
+  color: var(--text-2);
+  max-width: 620px;
+  margin-bottom: 50px;
+}
+
+/* ===== Stats (counter) ===== */
+.stats-section { background: var(--bg-soft); }
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 60px;
+}
+.stat-item {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 36px 24px;
+  text-align: center;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.stat-item:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.stat-num-wrap {
+  display: inline-flex;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+.stat-number {
+  font-family: 'Poppins', 'Pretendard', sans-serif;
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.stat-suffix {
+  font-family: 'Poppins', 'Pretendard', sans-serif;
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 700;
+  color: var(--text);
+  margin-left: 2px;
+}
+.stat-label {
+  font-size: 14px;
+  color: var(--text-3);
+  font-weight: 500;
+}
+@media (max-width: 720px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Before/After bars */
+.before-after {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+}
+.ba-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  letter-spacing: -0.02em;
+}
+.ba-row {
+  display: grid;
+  grid-template-columns: 100px 1fr 60px;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.ba-row:last-child { margin-bottom: 0; }
+.ba-label { font-size: 14px; color: var(--text-3); font-weight: 600; }
+.ba-bar-wrap {
+  height: 32px;
+  background: var(--bg-mute);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+.ba-bar {
+  height: 100%;
+  border-radius: 16px;
+  width: 0;
+  transition: width 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+.ba-bar.before { background: linear-gradient(90deg, #d4d4d4, #a3a3a3); }
+.ba-bar.after { background: var(--grad); }
+.ba-value { font-size: 15px; font-weight: 700; color: var(--text); text-align: right; font-family: 'Poppins', sans-serif; }
+
+@media (max-width: 600px) {
+  .ba-row { grid-template-columns: 70px 1fr 50px; gap: 10px; }
+  .before-after { padding: 24px; }
+}
+
+/* ===== About ===== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: start;
+}
+.about-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+}
+.about-card h3 {
+  font-size: 14px;
+  color: var(--text-3);
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.about-list { list-style: none; }
+.about-list li {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line-soft);
+  display: flex; align-items: flex-start; gap: 12px;
+}
+.about-list li:last-child { border-bottom: none; }
+.about-list .label {
+  font-size: 13px; color: var(--text-3);
+  min-width: 64px; padding-top: 2px;
+}
+.about-list .value { font-size: 15.5px; font-weight: 500; }
+@media (max-width: 880px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* ===== Why (차별점) ===== */
+.why { background: var(--bg-soft); }
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.why-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px;
+  transition: transform .25s ease, box-shadow .25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.why-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: var(--grad);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .4s ease;
+}
+.why-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.why-card:hover::before { transform: scaleX(1); }
+.why-num {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px; font-weight: 800;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 12px;
+}
+.why-card h3 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+.why-card p {
+  font-size: 15px;
+  color: var(--text-2);
+  line-height: 1.65;
+}
+@media (max-width: 880px) {
+  .why-grid { grid-template-columns: 1fr; }
+}
+
+.philosophy {
+  margin-top: 60px;
+  padding: 50px;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  border-radius: var(--radius-lg);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.philosophy::before {
+  content: '"';
+  position: absolute;
+  top: -40px; left: 24px;
+  font-size: 200px;
+  font-weight: 800;
+  color: rgba(255,255,255,0.06);
+  font-family: Georgia, serif;
+}
+.philosophy::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(22,163,74,0.18), transparent 70%);
+  pointer-events: none;
+}
+.philosophy-label {
+  font-size: 13px; color: rgba(255,255,255,0.5);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 14px;
+  position: relative;
+}
+.philosophy-quote {
+  font-size: clamp(19px, 2.4vw, 24px);
+  line-height: 1.55;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  position: relative;
+}
+@media (max-width: 600px) {
+  .philosophy { padding: 32px 24px; }
+}
+
+/* ===== Services ===== */
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
+}
+.svc-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.svc-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.svc-icon {
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+.svc-card h3 {
+  font-size: 17px; font-weight: 700;
+  margin-bottom: 8px;
+}
+.svc-card p {
+  font-size: 14.5px; color: var(--text-2);
+}
+@media (max-width: 880px) {
+  .svc-grid { grid-template-columns: 1fr; }
+}
+
+.subjects {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.subjects-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  border-bottom: 1px solid var(--line);
+}
+.subjects-row:last-child { border-bottom: none; }
+.subjects-row .k {
+  padding: 18px 20px;
+  background: var(--bg-soft);
+  font-weight: 600;
+  font-size: 14.5px;
+  display: flex; align-items: center;
+}
+.subjects-row .v {
+  padding: 18px 20px;
+  font-size: 15px;
+  color: var(--text-2);
+}
+@media (max-width: 600px) {
+  .subjects-row { grid-template-columns: 1fr; }
+  .subjects-row .k { padding-bottom: 4px; }
+  .subjects-row .v { padding-top: 4px; }
+}
+
+/* ===== Curriculum ===== */
+.curr { background: var(--bg-soft); }
+.curr-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  position: relative;
+}
+.curr-step {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  position: relative;
+  transition: transform .2s;
+}
+.curr-step:hover { transform: translateY(-2px); }
+.curr-time {
+  display: inline-block;
+  background: var(--text);
+  color: #fff;
+  font-size: 12px; font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+.curr-step h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.curr-step p {
+  font-size: 14px;
+  color: var(--text-3);
+  line-height: 1.5;
+}
+@media (max-width: 880px) {
+  .curr-flow { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ===== Results ===== */
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.result-list { list-style: none; }
+.result-item {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  gap: 18px;
+  align-items: center;
+}
+.result-item:last-child { border-bottom: none; }
+.result-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: var(--bg-mute);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-2);
+  text-align: center;
+}
+.result-text {
+  font-size: 15.5px;
+  font-weight: 500;
+}
+.result-text small {
+  display: block;
+  font-size: 13px;
+  color: var(--text-3);
+  margin-top: 2px;
+  font-weight: 400;
+}
+.result-arrow {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent);
+}
+.result-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.result-images figure {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-soft);
+}
+.result-images img { aspect-ratio: 3/4; object-fit: contain; padding: 8px; }
+@media (max-width: 880px) {
+  .results-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* ===== Reviews (marquee) ===== */
+.reviews { background: var(--bg-soft); padding-bottom: 60px; }
+.reviews .container.intro { margin-bottom: 50px; }
+.marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 80px, #000 calc(100% - 80px), transparent);
+  mask-image: linear-gradient(to right, transparent, #000 80px, #000 calc(100% - 80px), transparent);
+  margin-bottom: 18px;
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 18px;
+  animation: marquee 50s linear infinite;
+}
+.marquee:hover .marquee-track { animation-play-state: paused; }
+.marquee.reverse .marquee-track { animation-direction: reverse; animation-duration: 60s; }
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.review {
+  flex: 0 0 380px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px;
+}
+.review-stars { color: #f59e0b; font-size: 14px; margin-bottom: 12px; letter-spacing: 1px; }
+.review-text {
+  font-size: 14.5px;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.review-meta {
+  display: flex; align-items: center; gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line-soft);
+  font-size: 13px;
+  color: var(--text-3);
+}
+.review-meta strong { color: var(--text); font-weight: 600; }
+.review-image-row {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.review-image-row figure {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  padding: 12px;
+}
+.review-image-row figcaption {
+  font-size: 12px; color: var(--text-3);
+  text-align: center;
+  margin-top: 8px;
+}
+@media (max-width: 720px) {
+  .review { flex: 0 0 300px; }
+  .review-image-row { grid-template-columns: 1fr; }
+}
+
+/* ===== Materials ===== */
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+.material {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-soft);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.material:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.material img {
+  aspect-ratio: 1 / 1.3;
+  object-fit: cover;
+  object-position: top;
+  background: #fff;
+  transition: transform .5s ease;
+}
+.material:hover img { transform: scale(1.04); }
+.material figcaption {
+  padding: 14px 16px;
+  font-size: 13.5px;
+  font-weight: 600;
+  border-top: 1px solid var(--line);
+  background: #fff;
+}
+@media (max-width: 880px) {
+  .materials-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ===== Contact ===== */
+.contact {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.contact::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(22,163,74,0.18), transparent 70%);
+}
+.contact::after {
+  content: '';
+  position: absolute;
+  bottom: -150px; left: -150px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(37,99,235,0.18), transparent 70%);
+}
+.contact .container { position: relative; z-index: 1; }
+.contact .section-eyebrow { color: #4ade80; }
+.contact .section-title { color: #fff; }
+.contact .section-desc { color: rgba(255,255,255,0.7); }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+.status-box {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-bottom: 24px;
+  backdrop-filter: blur(10px);
+}
+.status-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px;
+  color: #4ade80;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.status-label .dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 12px #4ade80;
+  animation: pulse 2s infinite;
+}
+.status-box h3 {
+  font-size: 22px; font-weight: 700; margin-bottom: 6px;
+}
+.status-box p {
+  font-size: 15px; color: rgba(255,255,255,0.6);
+}
+.contact-info {
+  background: #fff;
+  color: var(--text);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.contact-info h3 {
+  font-size: 18px; font-weight: 700; margin-bottom: 20px;
+}
+.phone-big {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.contact-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 14.5px;
+}
+.contact-row:last-of-type { border-bottom: none; }
+.contact-row .k {
+  color: var(--text-3);
+  min-width: 76px;
+  font-size: 13px;
+}
+.contact-row .v { color: var(--text); font-weight: 500; }
+.contact-cta-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 24px;
+}
+.contact-cta-row .btn { width: 100%; justify-content: center; padding: 14px; }
+.btn-call { background: var(--text); color: #fff; }
+.btn-msg { background: #fef08a; color: #422006; }
+.btn-call:hover, .btn-msg:hover { transform: translateY(-2px); }
+
+.process {
+  margin-top: 14px;
+  display: flex; gap: 8px; flex-wrap: wrap;
+  align-items: center;
+  font-size: 13.5px;
+  color: rgba(255,255,255,0.7);
+}
+.process .step {
+  background: rgba(255,255,255,0.08);
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+}
+.process .arrow { color: rgba(255,255,255,0.4); }
+.process small { display: block; margin-top: 14px; color: rgba(255,255,255,0.5); font-size: 12.5px; line-height: 1.6; flex-basis: 100%; }
+@media (max-width: 880px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== Footer ===== */
+footer {
+  padding: 40px 0;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-3);
+  border-top: 1px solid var(--line);
+}
+footer .brand { justify-content: center; margin-bottom: 12px; }
+
+/* ===== Floating CTA (Mobile) ===== */
+.float-cta {
+  display: none;
+  position: fixed;
+  bottom: 16px; left: 16px; right: 16px;
+  z-index: 90;
+  background: var(--text);
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+@media (max-width: 720px) {
+  .float-cta { display: block; }
+}
+
+/* ===== Scroll Reveal ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .9s cubic-bezier(0.16, 1, 0.3, 1), transform .9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--delay, 0ms);
+  will-change: opacity, transform;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <nav class="nav">
+    <a href="#top" class="brand">
+      <span class="brand-mark"></span>
+      <span>과학은 백쌤</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">소개</a></li>
+      <li><a href="#why">차별점</a></li>
+      <li><a href="#services">수업</a></li>
+      <li><a href="#results">성과</a></li>
+      <li><a href="#reviews">후기</a></li>
+    </ul>
+    <div class="live-status">
+      <span class="live-dot"></span>
+      <span>상담 가능</span>
+    </div>
+    <a href="tel:01095199733" class="nav-cta">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      상담 전화
+    </a>
+  </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="hero-gradient-overlay"></div>
+  <canvas id="hero-particles"></canvas>
+
+  <!-- Floating science decorations -->
+  <div class="science-deco" aria-hidden="true">
+    <!-- Benzene ring (육각형 분자) -->
+    <svg class="deco-benzene-1 float-1 accent-g" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+      <polygon points="50,8 86,28 86,72 50,92 14,72 14,28" />
+      <polygon points="50,18 78,32 78,68 50,82 22,68 22,32" stroke-dasharray="3 3" />
+      <circle cx="50" cy="8" r="3" fill="currentColor" stroke="none"/>
+      <circle cx="86" cy="28" r="3" fill="currentColor" stroke="none"/>
+      <circle cx="86" cy="72" r="3" fill="currentColor" stroke="none"/>
+      <circle cx="50" cy="92" r="3" fill="currentColor" stroke="none"/>
+      <circle cx="14" cy="72" r="3" fill="currentColor" stroke="none"/>
+      <circle cx="14" cy="28" r="3" fill="currentColor" stroke="none"/>
+    </svg>
+
+    <!-- Smaller benzene -->
+    <svg class="deco-benzene-2 float-3 accent-b" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+      <polygon points="50,10 84,30 84,70 50,90 16,70 16,30" />
+      <line x1="50" y1="10" x2="50" y2="22"/>
+      <line x1="84" y1="30" x2="74" y2="36"/>
+      <line x1="84" y1="70" x2="74" y2="64"/>
+      <line x1="50" y1="90" x2="50" y2="78"/>
+      <line x1="16" y1="70" x2="26" y2="64"/>
+      <line x1="16" y1="30" x2="26" y2="36"/>
+    </svg>
+
+    <!-- Atom with electron orbits -->
+    <svg class="deco-atom-1 spin-slow accent-b" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.3">
+      <ellipse cx="50" cy="50" rx="45" ry="18" />
+      <ellipse cx="50" cy="50" rx="45" ry="18" transform="rotate(60 50 50)" />
+      <ellipse cx="50" cy="50" rx="45" ry="18" transform="rotate(120 50 50)" />
+      <circle cx="50" cy="50" r="6" fill="currentColor" stroke="none"/>
+      <circle cx="95" cy="50" r="3" fill="currentColor" stroke="none"/>
+      <circle cx="27.5" cy="11" r="3" fill="currentColor" stroke="none"/>
+      <circle cx="27.5" cy="89" r="3" fill="currentColor" stroke="none"/>
+    </svg>
+
+    <!-- Atom 2 -->
+    <svg class="deco-atom-2 float-2 accent-g" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.3">
+      <ellipse cx="50" cy="50" rx="42" ry="16" transform="rotate(30 50 50)" />
+      <ellipse cx="50" cy="50" rx="42" ry="16" transform="rotate(-30 50 50)" />
+      <ellipse cx="50" cy="50" rx="42" ry="16" transform="rotate(90 50 50)" />
+      <circle cx="50" cy="50" r="5" fill="currentColor" stroke="none"/>
+    </svg>
+
+    <!-- DNA helix -->
+    <svg class="deco-dna float-1" viewBox="0 0 60 160" fill="none" stroke="currentColor" stroke-width="1.4">
+      <path d="M10,0 Q50,30 10,60 Q-30,90 10,120 Q50,150 10,160" />
+      <path d="M50,0 Q10,30 50,60 Q90,90 50,120 Q10,150 50,160" />
+      <line x1="14" y1="20" x2="46" y2="20"/>
+      <line x1="46" y1="50" x2="14" y2="50"/>
+      <line x1="14" y1="80" x2="46" y2="80"/>
+      <line x1="46" y1="110" x2="14" y2="110"/>
+      <line x1="14" y1="140" x2="46" y2="140"/>
+    </svg>
+
+    <!-- Erlenmeyer flask -->
+    <svg class="deco-flask float-2 accent-g" viewBox="0 0 60 80" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M22,4 L22,28 L8,68 Q8,76 16,76 L44,76 Q52,76 52,68 L38,28 L38,4 Z" />
+      <line x1="20" y1="4" x2="40" y2="4"/>
+      <path d="M14,54 L46,54" stroke-dasharray="2 2"/>
+      <circle cx="20" cy="62" r="2" fill="currentColor" stroke="none"/>
+      <circle cx="34" cy="66" r="1.5" fill="currentColor" stroke="none"/>
+      <circle cx="40" cy="60" r="1.5" fill="currentColor" stroke="none"/>
+    </svg>
+
+    <!-- Floating formulas -->
+    <span class="formula deco-formula-1 float-1">F = ma</span>
+    <span class="formula deco-formula-2 float-2 accent-g">H₂O + CO₂</span>
+    <span class="formula deco-formula-3 float-3 accent-b">E = mc²</span>
+    <span class="formula deco-formula-4 float-1">PV = nRT</span>
+  </div>
+
+  <div class="container hero-inner">
+    <div data-parallax="0.3">
+      <span class="hero-eyebrow reveal">
+        <span class="dot"></span>
+        2026년 6월 평일 저녁 3자리 모집 중
+      </span>
+      <h1 class="reveal">
+        <span class="typing-text"></span><span class="typing-cursor">|</span>
+        <br />
+        <span class="highlight">과학은 백쌤</span>
+      </h1>
+      <p class="lead reveal" style="--delay:200ms;">
+        경북대학교 약학과 졸업, 5년의 1:1 과외 경험. <br/>
+        개념의 깊이와 문제풀이 훈련을 균형 있게 — <br/>
+        과학 성적, 백쌤이 책임지겠습니다.
+      </p>
+      <div class="hero-cta reveal" style="--delay:400ms;">
+        <a href="tel:01095199733" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          010-9519-9733
+        </a>
+        <a href="#services" class="btn btn-ghost">수업 알아보기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST BAR ===== -->
+<div class="trust-bar">
+  <div class="container trust-bar-inner">
+    <div class="trust-item"><span class="trust-icon">🎓</span><span>경북대 약학과 졸업</span></div>
+    <div class="trust-item"><span class="trust-icon">📋</span><span>과외 5년차</span></div>
+    <div class="trust-item"><span class="trust-icon">👨‍🏫</span><span>누적 학생 <strong>20명+</strong></span></div>
+    <div class="trust-item"><span class="trust-icon">⭐</span><span>김과외 5점 만점</span></div>
+    <div class="trust-item"><span class="trust-icon">📈</span><span>이번 달 <strong>3자리</strong> 모집</span></div>
+  </div>
+</div>
+
+<!-- ===== STATS ===== -->
+<section class="stats-section" id="stats">
+  <div class="container">
+    <span class="section-eyebrow reveal">By the Numbers</span>
+    <h2 class="section-title reveal">숫자로 증명합니다</h2>
+    <p class="section-desc reveal">5년간 직접 1:1로 만나온 학생들이 만들어낸 결과입니다.</p>
+
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-num-wrap">
+          <span class="stat-number" data-target="50">0</span>
+          <span class="stat-suffix">점+</span>
+        </div>
+        <p class="stat-label">최대 성적 향상</p>
+      </div>
+      <div class="stat-item reveal" style="--delay:100ms;">
+        <div class="stat-num-wrap">
+          <span class="stat-number" data-target="20">0</span>
+          <span class="stat-suffix">명+</span>
+        </div>
+        <p class="stat-label">누적 지도 학생</p>
+      </div>
+      <div class="stat-item reveal" style="--delay:200ms;">
+        <div class="stat-num-wrap">
+          <span class="stat-number" data-target="5">0</span>
+          <span class="stat-suffix">년</span>
+        </div>
+        <p class="stat-label">개인과외 경력</p>
+      </div>
+      <div class="stat-item reveal" style="--delay:300ms;">
+        <div class="stat-num-wrap">
+          <span class="stat-number" data-target="2">0</span>
+          <span class="stat-suffix">등급↑</span>
+        </div>
+        <p class="stat-label">평균 등급 상승</p>
+      </div>
+    </div>
+
+    <div class="before-after reveal">
+      <h3 class="ba-title">실제 학생 성적 변화</h3>
+
+      <div class="ba-row">
+        <span class="ba-label">중2 학생</span>
+        <div class="ba-bar-wrap"><div class="ba-bar before" data-width="25"></div></div>
+        <span class="ba-value">25점</span>
+      </div>
+      <div class="ba-row" style="margin-bottom:24px;">
+        <span class="ba-label">→ 2개월 후</span>
+        <div class="ba-bar-wrap"><div class="ba-bar after" data-width="75"></div></div>
+        <span class="ba-value">75점</span>
+      </div>
+
+      <div class="ba-row">
+        <span class="ba-label">고1 모의고사</span>
+        <div class="ba-bar-wrap"><div class="ba-bar before" data-width="40"></div></div>
+        <span class="ba-value">3등급</span>
+      </div>
+      <div class="ba-row">
+        <span class="ba-label">→ 3개월 후</span>
+        <div class="ba-bar-wrap"><div class="ba-bar after" data-width="92"></div></div>
+        <span class="ba-value">1등급</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="container">
+    <span class="section-eyebrow reveal">About</span>
+    <h2 class="section-title reveal">백승훈 선생님</h2>
+    <p class="section-desc reveal">
+      약학을 전공한 과학 전문 과외 선생님입니다.
+      이론에 대한 깊은 이해와 5년간 쌓아온 1:1 지도 경험으로,
+      학생 한 명 한 명의 페이스에 맞춘 수업을 제공합니다.
+    </p>
+    <div class="about-grid">
+      <div class="about-card reveal">
+        <h3>Profile</h3>
+        <ul class="about-list">
+          <li><span class="label">이름</span><span class="value">백승훈</span></li>
+          <li><span class="label">학력</span><span class="value">경북대학교 약학대학 약학과 졸업</span></li>
+          <li><span class="label">전공</span><span class="value">약학 (Pharmacy)</span></li>
+          <li><span class="label">경력</span><span class="value">개인과외 5년차 (누적 20명+ 지도)</span></li>
+          <li><span class="label">지역</span><span class="value">대구 수성구 · 중구 외</span></li>
+        </ul>
+      </div>
+      <div class="about-card reveal" style="--delay:150ms;">
+        <h3>강점</h3>
+        <ul class="about-list">
+          <li><span class="label">01</span><span class="value">꼼꼼하고 체계적인 진도 관리</span></li>
+          <li><span class="label">02</span><span class="value">학생별 자료 준비 (자체 제작 프린트)</span></li>
+          <li><span class="label">03</span><span class="value">어려운 개념을 쉽게 풀어 설명</span></li>
+          <li><span class="label">04</span><span class="value">학습 외 진로·고민 상담까지</span></li>
+          <li><span class="label">05</span><span class="value">수업 외 카톡 질문 상시 가능</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY ===== -->
+<section class="why" id="why">
+  <div class="container">
+    <span class="section-eyebrow reveal">Why 백쌤</span>
+    <h2 class="section-title reveal">왜 백쌤이어야 할까요?</h2>
+    <p class="section-desc reveal">
+      과학은 이해와 문제풀이, 두 가지가 시너지를 일으킬 때 성적이 폭발적으로 오릅니다.
+      백쌤은 이 두 축을 균형 있게 잡아드립니다.
+    </p>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-num">01</div>
+        <h3>학생 수준별<br/>맞춤 수업과 과제</h3>
+        <p>같은 과목이라도 학생마다 막히는 지점이 다릅니다. 첫 시간 진단 후 학생에게 가장 필요한 커리큘럼과 과제를 설계해 드립니다.</p>
+      </div>
+      <div class="why-card reveal" style="--delay:100ms;">
+        <div class="why-num">02</div>
+        <h3>스스로 공부하는<br/>방법을 알려드립니다</h3>
+        <p>수업 시간만 공부하는 학생은 한계가 있습니다. 혼자서도 개념을 정리하고 문제를 풀어내는 학습 습관까지 함께 만듭니다.</p>
+      </div>
+      <div class="why-card reveal" style="--delay:200ms;">
+        <div class="why-num">03</div>
+        <h3>수업 외에도<br/>카톡 질문 가능</h3>
+        <p>모르는 문제를 그날그날 해결할 수 있도록, 수업이 없는 날에도 카카오톡으로 질문을 받고 답변해 드립니다.</p>
+      </div>
+    </div>
+
+    <div class="philosophy reveal">
+      <div class="philosophy-label">교육 철학</div>
+      <p class="philosophy-quote">
+        과학은 올바른 개념 이해와 빠르고 정확한 문제풀이,<br/>
+        두 가지가 시너지를 일으킬 때 성적이 폭발적으로 올라갑니다.<br/>
+        <strong>빈틈없는 개념 설명</strong>과 <strong>충분한 문제풀이 훈련</strong>으로 성적을 끌어올리겠습니다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+  <div class="container">
+    <span class="section-eyebrow reveal">Services</span>
+    <h2 class="section-title reveal">수업 안내</h2>
+    <p class="section-desc reveal">
+      중학생부터 N수생까지, 1:1·화상·소그룹 수업이 모두 가능합니다.
+      대구 수성구·중구는 방문 수업, 그 외 지역은 협의 후 진행합니다.
+    </p>
+
+    <div class="svc-grid">
+      <div class="svc-card reveal"><div class="svc-icon">👤</div><h3>1:1 개인과외</h3><p>대면 수업으로 가장 밀도 높은 1:1 진도 관리.</p></div>
+      <div class="svc-card reveal" style="--delay:100ms;"><div class="svc-icon">💻</div><h3>1:1 화상 과외</h3><p>Zoom 등 화상 도구로 거리 제약 없이 수업.</p></div>
+      <div class="svc-card reveal" style="--delay:200ms;"><div class="svc-icon">👥</div><h3>소그룹 과외</h3><p>2~4명 그룹 수업도 가능 (친구 그룹 환영).</p></div>
+    </div>
+
+    <div class="subjects reveal">
+      <div class="subjects-row"><div class="k">가르치는 과목</div><div class="v">중등 과학 · 고1 통합과학 · 고2 물리/화학/생명과학/지구과학 · 고3 통합과학 (수능 대비)</div></div>
+      <div class="subjects-row"><div class="k">대상</div><div class="v">중학생 ~ 고등학생 ~ N수생</div></div>
+      <div class="subjects-row"><div class="k">수업 시간</div><div class="v">주 1회 120분 (필요 시 주 2회 각 120분)</div></div>
+      <div class="subjects-row"><div class="k">수업 가능 시간</div><div class="v">화 · 수 · 금 저녁 7시 이후</div></div>
+      <div class="subjects-row"><div class="k">수업 지역</div><div class="v">대구 수성구 · 중구 (방문 수업) / 그 외 지역 스터디카페 또는 카페 협의</div></div>
+      <div class="subjects-row"><div class="k">사용 교재</div><div class="v">중등 [오투] · 고등 [완자] + [완자기출픽] · 자체 제작 프린트(내신 대비) · 고3/N수는 별도 협의</div></div>
+      <div class="subjects-row"><div class="k">수강료</div><div class="v">전화 또는 문자 상담 후 안내</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CURRICULUM ===== -->
+<section class="curr">
+  <div class="container">
+    <span class="section-eyebrow reveal">Curriculum</span>
+    <h2 class="section-title reveal">120분 수업 진행 방식</h2>
+    <p class="section-desc reveal">
+      1회 수업은 단순한 진도 나가기가 아닙니다.
+      복습 → 질의응답 → 신규 진도 → 정리, 4단계로 학습이 학생 안에 자리 잡도록 설계되어 있습니다.
+    </p>
+
+    <div class="curr-flow">
+      <div class="curr-step reveal"><span class="curr-time">10분</span><h4>빈칸 테스트</h4><p>전 시간에 배운 핵심 개념을 빠르게 점검합니다.</p></div>
+      <div class="curr-step reveal" style="--delay:100ms;"><span class="curr-time">20분</span><h4>과제 질의응답</h4><p>스스로 풀어온 과제를 함께 검토하고 막힌 부분을 해결합니다.</p></div>
+      <div class="curr-step reveal" style="--delay:200ms;"><span class="curr-time">80분</span><h4>진도 진행</h4><p>새로운 개념 설명과 예제 풀이로 본격적인 학습이 진행됩니다.</p></div>
+      <div class="curr-step reveal" style="--delay:300ms;"><span class="curr-time">10분</span><h4>리뷰 & 마무리</h4><p>수업 내용을 정리하고 학생의 추가 질문을 받습니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESULTS ===== -->
+<section id="results">
+  <div class="container">
+    <span class="section-eyebrow reveal">Results</span>
+    <h2 class="section-title reveal">실제 성적 향상 사례</h2>
+    <p class="section-desc reveal">
+      백쌤과 함께한 학생들이 만들어낸 결과입니다.
+      모두 학생 본인의 노력과 1:1 맞춤 지도가 만난 사례들입니다.
+    </p>
+
+    <div class="results-grid">
+      <ul class="result-list reveal">
+        <li class="result-item">
+          <span class="result-tag">고3</span>
+          <div class="result-text">경북대 약학과 예비 (한자리수) · 아주대 약학과 합격<small>약대 입시 합격 사례</small></div>
+          <span class="result-arrow">→</span>
+        </li>
+        <li class="result-item">
+          <span class="result-tag">중2</span>
+          <div class="result-text">25점 → 75점<small>2개월 수업 후 +50점 향상</small></div>
+          <span class="result-arrow">↑</span>
+        </li>
+        <li class="result-item">
+          <span class="result-tag">고1</span>
+          <div class="result-text">모의고사 과학 3등급 → 1등급<small>3월 → 6월, 한 학기 만에 두 등급 상승</small></div>
+          <span class="result-arrow">↑</span>
+        </li>
+        <li class="result-item">
+          <span class="result-tag">고1</span>
+          <div class="result-text">통합과학 내신 1등급<small>전 과목 1등급 달성에 기여</small></div>
+          <span class="result-arrow">★</span>
+        </li>
+      </ul>
+
+      <div class="result-images reveal" style="--delay:200ms;">
+        <figure><img src="images/result1.jpg" alt="2025년 6월 모의고사 과학 1등급 성적표" /></figure>
+        <figure><img src="images/result2.jpg" alt="고1 내신 통합과학 1등급 성적표" /></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS (marquee) ===== -->
+<section class="reviews" id="reviews">
+  <div class="container intro">
+    <span class="section-eyebrow reveal">Reviews</span>
+    <h2 class="section-title reveal">학부모님이 직접 남긴 후기</h2>
+    <p class="section-desc reveal">
+      김과외 플랫폼에 남겨주신 실제 학부모님들의 후기입니다.
+      마우스를 올리면 멈춥니다.
+    </p>
+  </div>
+
+  <div class="marquee">
+    <div class="marquee-track" id="marquee-1">
+      <!-- duplicated below for seamless loop -->
+    </div>
+  </div>
+  <div class="marquee reverse">
+    <div class="marquee-track" id="marquee-2">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="review-image-row reveal">
+      <figure>
+        <img src="images/review1.jpg" alt="실제 학부모 후기 - 김과외" />
+        <figcaption>김과외 플랫폼 실제 후기 캡처</figcaption>
+      </figure>
+      <figure>
+        <img src="images/review2.jpg" alt="고3 약대 합격 학부모 문자" />
+        <figcaption>약대 합격 후 받은 학부모 문자 (개인정보 마스킹)</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MATERIALS ===== -->
+<section>
+  <div class="container">
+    <span class="section-eyebrow reveal">Materials</span>
+    <h2 class="section-title reveal">자체 제작 학습 자료</h2>
+    <p class="section-desc reveal">
+      교과서·문제집만으로는 부족한 부분, 백쌤이 직접 만든 정리 프린트로 보완합니다.
+      개념 정리 노트 · 공식 요약표 · 단원별 핵심 자료 등을 학생에게 무료로 제공합니다.
+    </p>
+
+    <div class="materials-grid">
+      <figure class="material reveal"><img src="images/material1.jpg" alt="원소 기호와 이온 정리 자료" /><figcaption>원소·이온 정리 자료</figcaption></figure>
+      <figure class="material reveal" style="--delay:100ms;"><img src="images/material2.jpg" alt="화학식과 화학반응식 정리" /><figcaption>화학식·반응식 정리</figcaption></figure>
+      <figure class="material reveal" style="--delay:200ms;"><img src="images/material3.jpg" alt="역학 시스템과 안전 개념 정리" /><figcaption>역학·운동량 개념 노트</figcaption></figure>
+      <figure class="material reveal" style="--delay:300ms;"><img src="images/material4.jpg" alt="중력과 운동 개념 정리" /><figcaption>중력·운동 개념 노트</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <span class="section-eyebrow reveal">Contact</span>
+    <h2 class="section-title reveal">상담 신청</h2>
+    <p class="section-desc reveal">
+      먼저 전화 상담으로 학생의 현 상태를 듣고, 시범 수업 후 정식 등록을 진행합니다.
+    </p>
+
+    <div class="contact-grid">
+      <div>
+        <div class="status-box reveal">
+          <div class="status-label"><span class="dot"></span>현재 모집 상태</div>
+          <h3>2026년 6월부터 평일 저녁 3자리 가능</h3>
+          <p>화 · 수 · 금 7시 이후 시간대로 배정됩니다. 자리는 선착순 마감되니 빠른 문의 부탁드립니다.</p>
+        </div>
+
+        <div class="status-box reveal" style="--delay:150ms;">
+          <div class="status-label"><span class="dot" style="background:#fbbf24; box-shadow:0 0 12px #fbbf24;"></span>진행 절차</div>
+          <div class="process">
+            <span class="step">1. 전화 상담</span>
+            <span class="arrow">→</span>
+            <span class="step">2. 유료 시범수업 (1시간 / 3만원)</span>
+            <span class="arrow">→</span>
+            <span class="step">3. 정식 등록</span>
+            <small>※ 정식 수업 등록 시 시범수업 비용은 환급해 드립니다.<br/>※ 학습 의지가 있는 학생을 우선으로 받습니다.</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-info reveal" style="--delay:200ms;">
+        <h3>📞 지금 바로 전화 상담</h3>
+        <div class="phone-big">010-9519-9733</div>
+        <p style="font-size:13.5px; color:var(--text-3); margin-bottom:20px;">평일 오전 10시 ~ 오후 9시 통화 가능</p>
+
+        <div class="contact-row"><span class="k">이메일</span><span class="v">sh13aek@naver.com</span></div>
+        <div class="contact-row"><span class="k">결제 방식</span><span class="v">계좌이체 선납</span></div>
+        <div class="contact-row"><span class="k">활동 플랫폼</span><span class="v">김과외 Premium Class</span></div>
+
+        <div class="contact-cta-row">
+          <a href="tel:01095199733" class="btn btn-call">전화 걸기</a>
+          <a href="sms:01095199733" class="btn btn-msg">문자 보내기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="brand">
+      <span class="brand-mark"></span>
+      <span>과학은 백쌤</span>
+    </div>
+    <div>경북대학교 약학과 출신 백승훈 선생님 · 010-9519-9733</div>
+    <div style="margin-top:8px; color:var(--text-4);">© 2026 백승훈. All rights reserved.</div>
+  </div>
+</footer>
+
+<a href="tel:01095199733" class="float-cta">📞 010-9519-9733 전화 상담</a>
+
+<script>
+/* ===========================================
+   1) Smooth scroll with header offset
+=========================================== */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    if (id.length > 1) {
+      const el = document.querySelector(id);
+      if (el) {
+        e.preventDefault();
+        const top = el.getBoundingClientRect().top + window.pageYOffset - 64;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    }
+  });
+});
+
+/* ===========================================
+   2) Header scroll shadow
+=========================================== */
+const header = document.getElementById('site-header');
+const onScroll = () => {
+  if (window.scrollY > 20) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+/* ===========================================
+   3) Scroll Reveal (stagger 100ms via --delay)
+=========================================== */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+/* ===========================================
+   4) Hero typing animation
+=========================================== */
+(function typing() {
+  const target = document.querySelector('.typing-text');
+  if (!target) return;
+  const phrases = ['약대 출신이 가르치는', '개념과 풀이를 동시에', '대구 과학 1:1 과외'];
+  let p = 0, c = 0, deleting = false;
+
+  function tick() {
+    const cur = phrases[p];
+    if (!deleting) {
+      target.textContent = cur.slice(0, ++c);
+      if (c === cur.length) { deleting = true; setTimeout(tick, 1600); return; }
+    } else {
+      target.textContent = cur.slice(0, --c);
+      if (c === 0) { deleting = false; p = (p + 1) % phrases.length; }
+    }
+    setTimeout(tick, deleting ? 35 : 70);
+  }
+  tick();
+})();
+
+/* ===========================================
+   5) Counter animation (easeOutCubic)
+=========================================== */
+const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const target = +el.dataset.target;
+    const duration = 1600;
+    const start = performance.now();
+    const animate = (now) => {
+      const t = Math.min((now - start) / duration, 1);
+      el.textContent = Math.round(target * easeOutCubic(t));
+      if (t < 1) requestAnimationFrame(animate);
+    };
+    requestAnimationFrame(animate);
+    counterObserver.unobserve(el);
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(el));
+
+/* ===========================================
+   6) Before/After bar animation
+=========================================== */
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const bar = entry.target;
+    const w = bar.dataset.width;
+    setTimeout(() => { bar.style.width = w + '%'; }, 100);
+    barObserver.unobserve(bar);
+  });
+}, { threshold: 0.4 });
+document.querySelectorAll('.ba-bar').forEach(el => barObserver.observe(el));
+
+/* ===========================================
+   7) Hero parallax
+=========================================== */
+const parallaxEls = document.querySelectorAll('[data-parallax]');
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  parallaxEls.forEach(el => {
+    const speed = parseFloat(el.dataset.parallax) || 0.3;
+    el.style.transform = `translateY(${y * speed * -1}px)`;
+  });
+}, { passive: true });
+
+/* ===========================================
+   8) Hero particle canvas + mouse interaction
+=========================================== */
+(function particles() {
+  const canvas = document.getElementById('hero-particles');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const hero = canvas.parentElement;
+
+  let w, h;
+  let dots = [];
+  let mouse = { x: -9999, y: -9999 };
+  const DOT_COUNT = 60;
+  const LINK_DIST = 130;
+  const MOUSE_DIST = 160;
+
+  function resize() {
+    w = canvas.width = hero.offsetWidth * devicePixelRatio;
+    h = canvas.height = hero.offsetHeight * devicePixelRatio;
+    canvas.style.width = hero.offsetWidth + 'px';
+    canvas.style.height = hero.offsetHeight + 'px';
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  for (let i = 0; i < DOT_COUNT; i++) {
+    dots.push({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      vx: (Math.random() - 0.5) * 0.4 * devicePixelRatio,
+      vy: (Math.random() - 0.5) * 0.4 * devicePixelRatio,
+      r: (Math.random() * 1.5 + 0.6) * devicePixelRatio,
+    });
+  }
+
+  hero.addEventListener('mousemove', (e) => {
+    const rect = hero.getBoundingClientRect();
+    mouse.x = (e.clientX - rect.left) * devicePixelRatio;
+    mouse.y = (e.clientY - rect.top) * devicePixelRatio;
+  });
+  hero.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
+
+  // Two brand colors for line gradient
+  const C1 = '22,163,74';   // green
+  const C2 = '37,99,235';   // blue
+
+  function loop() {
+    ctx.clearRect(0, 0, w, h);
+
+    // update + draw dots
+    for (let d of dots) {
+      d.x += d.vx; d.y += d.vy;
+      if (d.x < 0 || d.x > w) d.vx *= -1;
+      if (d.y < 0 || d.y > h) d.vy *= -1;
+      ctx.beginPath();
+      ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(60,60,60,0.45)`;
+      ctx.fill();
+    }
+
+    // dot-to-dot lines
+    for (let i = 0; i < dots.length; i++) {
+      for (let j = i + 1; j < dots.length; j++) {
+        const a = dots[i], b = dots[j];
+        const dx = a.x - b.x, dy = a.y - b.y;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        if (dist < LINK_DIST * devicePixelRatio) {
+          const op = 1 - dist / (LINK_DIST * devicePixelRatio);
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
+          ctx.strokeStyle = `rgba(80,80,80,${op * 0.18})`;
+          ctx.lineWidth = devicePixelRatio * 0.6;
+          ctx.stroke();
+        }
+      }
+
+      // mouse-to-dot lines (gradient)
+      const dx = dots[i].x - mouse.x, dy = dots[i].y - mouse.y;
+      const dist = Math.sqrt(dx*dx + dy*dy);
+      if (dist < MOUSE_DIST * devicePixelRatio) {
+        const op = 1 - dist / (MOUSE_DIST * devicePixelRatio);
+        const grad = ctx.createLinearGradient(mouse.x, mouse.y, dots[i].x, dots[i].y);
+        grad.addColorStop(0, `rgba(${C1},${op})`);
+        grad.addColorStop(1, `rgba(${C2},${op})`);
+        ctx.beginPath();
+        ctx.moveTo(mouse.x, mouse.y); ctx.lineTo(dots[i].x, dots[i].y);
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = devicePixelRatio * 1;
+        ctx.stroke();
+      }
+    }
+
+    requestAnimationFrame(loop);
+  }
+  loop();
+})();
+
+/* ===========================================
+   9) Marquee track build (duplicate for loop)
+=========================================== */
+(function buildReviews() {
+  const reviewsData = [
+    { stars: 5, text: '학원을 다니다가 열심히 하지 않는 아이라 과외를 알아보게 되었고 김과외를 통해 약대선생님을 찾게 되었습니다. 첫수업 받아보고 쉽게 설명해주신다고 만족했습니다. 학습플래너를 매주 쓰게 하시고 월말 평가서까지 보내주셔서 진행 정도를 살펴볼 수 있어 좋았습니다.', meta: '중3 학부모 · 대구 · 2025.07' },
+    { stars: 5, text: '진작에 만났으면 더 좋았을거라는 생각이 들만큼 강력하게 추천합니다!!! 개념을 잘 이해 시켜주시고 문제에 어떻게 적용할 수 있는지 꼼꼼하게 체크해 주셔서 아이가 선생님과의 수업이 좋다고 합니다. 수업준비와 자료준비도 철저하시고 항상 시간 잘 지켜주셔서 신뢰할 수 있습니다.', meta: '고1 학부모 · 대구 · 2025.06' },
+    { stars: 5, text: '아이랑 맞지 않아 개인수업을 받아볼까 하는 마음으로 과외선생님을 찾게 되었습니다. 첫 과외선생님을 아주 잘 만나게 된 것 같습니다. 차분하시고 아이랑 소통도 잘되니 아이가 너무 좋아하구요. 체계적인 수업계획, 수업피드백에 선생님의 꼼꼼함이 보이세요.', meta: '학부모 · 2025년 2분기' },
+    { stars: 5, text: '중간때 25점이었는데 쌤덕에 기말은 75점 맞았어요ㅋㅋ 그럼 나중에 시간조율차 다시 연락한번 드릴께요~^^', meta: '중2 학부모 · 문자 후기' },
+    { stars: 5, text: '엄마입장에선 그런말만 들어도 대만족이지요^^ 기말고사 기간인데 내용정리, 문제풀이등 내신준비도 철저히 해주세요. 매달 수업후 수업내용 과정 아이의수업상태 정도를 상세히 설명해주십니다.', meta: '학부모 · 카톡 후기' },
+    { stars: 5, text: '아이가 어려운 아인데 \'스터디 플래너\'를 직접 만들어 주시고 알려주셔서 아이가 공부 방법, 습관등을 잘 배울수있겠더라구요. 다른과목에도 활용한답니다^^', meta: '중3 학부모' },
+    { stars: 5, text: '인상과 말투 모두 훌륭하셔서 주변에 수업이 필요하다 물어보면 마구마구 추천해주고 싶은 선생님이세요!!', meta: '학부모 · 추천 후기' },
+    { stars: 5, text: '경대는 예비 받았고 아주대 약대를 최초합 했어요. 경대, 아주대 둘다 될거 같아서 어딜갈지 고민중이었는데 ㅠㅠ 정말 감사드립니다.', meta: '고3 학부모 · 약대 합격' },
+  ];
+
+  const card = (r) => `
+    <div class="review">
+      <div class="review-stars">${'★'.repeat(r.stars)}</div>
+      <p class="review-text">"${r.text}"</p>
+      <div class="review-meta"><strong>${r.meta.split('·')[0].trim()}</strong>${r.meta.includes('·') ? ' · ' + r.meta.split('·').slice(1).join('·').trim() : ''}</div>
+    </div>`;
+
+  const set1 = reviewsData.map(card).join('');
+  const set2 = [...reviewsData].reverse().map(card).join('');
+
+  // Duplicate content for seamless loop
+  document.getElementById('marquee-1').innerHTML = set1 + set1;
+  document.getElementById('marquee-2').innerHTML = set2 + set2;
+})();
+</script>
+
+</body>
+</html>
